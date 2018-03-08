@@ -1,0 +1,45 @@
+O Software LotoEasy é um sistema gerador de combinações numéricas para jogos de loteria.
+Em sua versão 0.0.1 beta, é capaz de gerar jogos para Lotofácil, Megasena e quina, permitindo a geração de jogos
+das mais diversas combinações, inclusive além das definidas nas regras dos referidos jogos.
+
+O sistema é bem simples, e deve permitir que um usuário defina, via terminal, qual jogo quer gerar as combinações, seguido 
+do tamanho das combinações.
+
+Exemplo:
+O usuário quer gerar todas as combinações possíveis de jogos para a lotofácil, considerando jogos com 15 combinações, dentre
+os 25 números possíveis.
+Para tanto, ele deve inserir os parâmetros de inicialização do programa "1	15"
+sendo "1" o número relativo ao jogo lotofácil, e "15" o tamanho da combinação, isto é, com 15 números, dentre os 25 possíveis.
+
+
+Desta forma:
+1 - Lotofácil
+2 - Megasena
+3 - Quina
+
+As regras do jogo podem ser obtidas no site oficial da caixa econômica federal, como a quantidade de números numa cartela.
+
+Ao executar o programa, ele deve ser capaz de gerar, de uma única vez, as combinações para os parâmetros informados na inicialização
+sendo que, ao fim da geração, o programa deve gerar um arquivo binário contendo as combinações.
+Para facilitar a gestão dos dados, o programa deve gerar o arquivo com um nome devidamente qualificado, segundo a regra:
+
+data/NomeJogo-dataDaGeraçãoDasCombinações-tamanho-do-jogo.dat
+ 
+Ex.: 
+Retomando o exemplo anterior, o arquivo gerado, considerando que foi feito no dia 02/03/2018, será:
+
+data/Lotofacil-02032018-15.dat
+
+em que "Lotofacil" é o nome do jogo, "02032018" é a data sem caracteres especiais, e "15" é o tamanho do jogo gerado, isto
+é, com 15 números.
+
+Se uma mesma combinação, com as mesmas características, for solicitada no mesmo dia, o programa deve complementar o nome
+com a letra na sequência do alfabeto, logo após o tamanho do jogo:
+
+Primeiro jogo -> data/Lotofacil-02032018-15a.dat
+Segundo jogo -> data/Lotofacil-02032018-15b.dat
+
+
+Por fim, as combinações não podem considerar repetições de números em um mesmo jogo.
+
+ 
